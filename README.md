@@ -36,8 +36,6 @@ municipios-brasileiros/
   - `routes.py` — Definição das rotas principais
   - `settings.py` — Configurações globais da aplicação
 
-  
-
 ## Como Executar
 
 1. **Clone o repositório:**
@@ -57,12 +55,12 @@ municipios-brasileiros/
 4. **Execute a aplicação:**
    ```bash
    cd app
-   flask run --app app.py --debug
+   flask --app app.py --debug run
    ```
    Acesse em: http://127.0.0.1:5000/
 
 ## Tecnologias Utilizadas
+
 - Python 3
 - Flask
 - Bootstrap (via CDN)
-

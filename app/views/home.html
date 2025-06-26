@@ -3,8 +3,36 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="text-center py-16">
-    <h1 class="text-4xl font-bold text-gray-800 mb-4">Bem-vindo à Home!</h1>
-    <p class="text-lg text-gray-600">Esta é a página inicial da sua aplicação Flask.</p>
+
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="buscaMun-tab" data-bs-toggle="tab" data-bs-target="#buscaMun-tab-pane" type="button" role="tab" aria-controls="buscaMun-tab-pane" aria-selected="true">Busca Município</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="apresentaPop-tab" data-bs-toggle="tab" data-bs-target="#apresentaPop-tab-pane" type="button" role="tab" aria-controls="apresentaPop-tab-pane" aria-selected="false">Apresenta População</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="listaCap-tab" data-bs-toggle="tab" data-bs-target="#listaCap-tab-pane" type="button" role="tab" aria-controls="listaCap-tab-pane" aria-selected="false">Lista capitais</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="ListaMun-tab" data-bs-toggle="tab" data-bs-target="#ListaMun-tab-pane" type="button" role="tab" aria-controls="ListaMun-tab-pane" aria-selected="false">Lista municípios</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="capMenor-tab" data-bs-toggle="tab" data-bs-target="#capMenor-tab-pane" type="button" role="tab" aria-controls="capMenor-tab-pane" aria-selected="false">Lista Capitais de estados que não são as mais populosas  </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="dezMun-tab" data-bs-toggle="tab" data-bs-target="#dezMun-tab-pane" type="button" role="tab" aria-controls="dezMun-tab-pane" aria-selected="false">Apresenta dez municípios mais populosos e não capitais</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="buscaMun-tab-pane" role="tabpanel" aria-labelledby="buscaMun-tab" tabindex="0">{% include "teste.html"%}</div>
+  <div class="tab-pane fade" id="apresentaPop-tab-pane" role="tabpanel" aria-labelledby="apresentaPop-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="listaCap-tab-pane" role="tabpanel" aria-labelledby="listaCap-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="ListaMun-tab-pane" role="tabpanel" aria-labelledby="ListaMun-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="capMenor-tab-pane" role="tabpanel" aria-labelledby="capMenor-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="dezMun-tab-pane" role="tabpanel" aria-labelledby="dezMun-tab" tabindex="0">...</div>
+</div>
+
 </div>
 {% endblock %}
