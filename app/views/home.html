@@ -5,34 +5,44 @@
 {% block content %}
 
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="buscaMun-tab" data-bs-toggle="tab" data-bs-target="#buscaMun-tab-pane" type="button" role="tab" aria-controls="buscaMun-tab-pane" aria-selected="true">Busca Município</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="apresentaPop-tab" data-bs-toggle="tab" data-bs-target="#apresentaPop-tab-pane" type="button" role="tab" aria-controls="apresentaPop-tab-pane" aria-selected="false">Apresenta População</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="listaCap-tab" data-bs-toggle="tab" data-bs-target="#listaCap-tab-pane" type="button" role="tab" aria-controls="listaCap-tab-pane" aria-selected="false">Lista capitais</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="ListaMun-tab" data-bs-toggle="tab" data-bs-target="#ListaMun-tab-pane" type="button" role="tab" aria-controls="ListaMun-tab-pane" aria-selected="false">Lista municípios</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="capMenor-tab" data-bs-toggle="tab" data-bs-target="#capMenor-tab-pane" type="button" role="tab" aria-controls="capMenor-tab-pane" aria-selected="false">Lista Capitais de estados que não são as mais populosas  </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="dezMun-tab" data-bs-toggle="tab" data-bs-target="#dezMun-tab-pane" type="button" role="tab" aria-controls="dezMun-tab-pane" aria-selected="false">Apresenta dez municípios mais populosos e não capitais</button>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="buscaMun-tab-pane" role="tabpanel" aria-labelledby="buscaMun-tab" tabindex="0">{% include "buscaMun.html"%}</div>
-  <div class="tab-pane fade" id="apresentaPop-tab-pane" role="tabpanel" aria-labelledby="apresentaPop-tab" tabindex="0">{% include "apresentaPop.html"%}</div>
-  <div class="tab-pane fade" id="listaCap-tab-pane" role="tabpanel" aria-labelledby="listaCap-tab" tabindex="0">{% include "listaCap.html"%}</div>
-  <div class="tab-pane fade" id="ListaMun-tab-pane" role="tabpanel" aria-labelledby="ListaMun-tab" tabindex="0">{% include "ListaMun.html"%}</div>
-  <div class="tab-pane fade" id="capMenor-tab-pane" role="tabpanel" aria-labelledby="capMenor-tab" tabindex="0">{% include "capMenor.html"%}</div>
-  <div class="tab-pane fade" id="dezMun-tab-pane" role="tabpanel" aria-labelledby="dezMun-tab" tabindex="0">{% include "dezMun.html"%}</div>
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">Disabled</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">{% include "buscaMun.html"%}</div>
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">{% include "apresentaPop.html"%}</div>
+    <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">{% include "listaCap.html"%}</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">{% include "listaMun.html"%}</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">{% include ""%}</div>
+  </div>
 </div>
 
+
+
+<!--
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-BuscaMun-tab" data-bs-toggle="tab" data-bs-target="#nav-BuscaMun" type="button" role="tab"  aria-selected="true">Busca Município</button>
+    <button class="nav-link" id="nav-BuscPop-tab" data-bs-toggle="tab" data-bs-target="#nav-BuscPop" type="button" role="tab" aria-selected="false">Busca População</button>
+    <button class="nav-link" id="nav-ListaCap-tab" data-bs-toggle="tab" data-bs-target="#nav-ListaCap" type="button" role="tab" aria-selected="false">Lista Capitais</button>
+    <button class="nav-link" id="nav-ListaMun-tab" data-bs-toggle="tab" data-bs-target="#nav-ListaMun" type="button" role="tab" aria-selected="false">Lista Municípios</button>
+    <button class="nav-link" id="nav-ListaCidade-tab" data-bs-toggle="tab" data-bs-target="#nav-ListaCidade" type="button" role="tab" aria-selected="false">Lista cidades mais populosos que capitais</button>
+    <button class="nav-link" id="nav--tab" data-bs-toggle="tab" data-bs-target="#nav-" type="button" role="tab" aria-controls="nav-" aria-selected="false">Lista dez municípios mais populosos que não são capitais</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-BuscaMun" role="tabpanel" aria-labelledby="nav-BuscaMun-tab" tabindex="0">{% include "buscaMun.html"%}</div>
+  <div class="tab-pane fade" id="nav-BuscPop" role="tabpanel" aria-labelledby="nav-BuscPop-tab" tabindex="0">{% include "apresentaPop.html"%}</div>
+  <div class="tab-pane fade" id="nav-ListaCap" role="tabpanel" aria-labelledby="nav-ListaCap-tab" tabindex="0">{% include "listaCap.html"%}</div>
+  <div class="tab-pane fade" id="nav-ListaMun" role="tabpanel" aria-labelledby="nav-ListaMun-tab" tabindex="0">testset"</div>
+  <div class="tab-pane fade" id="nav-ListaCidade" role="tabpanel" aria-labelledby="nav-ListaCidade-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="nav-" role="tabpanel" aria-labelledby="nav--tab" tabindex="0">...</div>
 </div>
+-->
+
 {% endblock %}
